@@ -27,7 +27,21 @@ public class DiceTest {
         boolean expected = true;
         boolean actual = false;
 
-        if(roll <= 12 || roll > 0) {
+        if(roll <= 12 || roll > 2) {
+            actual = true;
+        }
+
+        Assert.assertEquals(expected ,actual);
+    }
+
+    @Test
+    public void rollAndSum3() {
+        Dice dice = new Dice(3);
+        int roll = dice.rollAndSum();
+        boolean expected = true;
+        boolean actual = false;
+
+        if(roll <= 18 || roll > 0) {
             actual = true;
         }
 
